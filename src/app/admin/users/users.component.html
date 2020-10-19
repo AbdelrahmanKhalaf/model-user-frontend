@@ -1,0 +1,49 @@
+<div class="body-c">
+    <div class="container">
+        <div class="row body">
+            <legend class="Lista-Users  text-center ">List Users</legend>
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline" [formGroup]="searchUser" (ngSubmit)="grtSerch()">
+                    <input class="form-control mr-sm-2" type="search" value="{{search}}" name="search" placeholder="Search" aria-label="Search" formControlName="search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </nav>
+            <a href="#" class="text-center" routerLink="/add-user">
+                <h4 class="alert alert-info">
+                    Add User
+                </h4>
+            </a>
+            <div class="col-md-12">
+                <ul *ngFor="let user of users" class="col-md-3 ">
+                    <div class='back-groun text-center lead'>
+                        <label class="adr-user"></label>
+                        <span><img class="user-avatar " src="http://localhost:3000/{{user.avatar}}" alt="fuck"></span>
+                        <br>
+                        <label class="adr-user">Name</label>
+                        <span class="user-name">{{user.name}}</span>
+                        <br>
+                        <label class="adr-user">Email</label>
+                        <span class="user-name">{{user.email}}</span>
+                        <br>
+                        <label class="adr-user">Modile</label>
+                        <span class="user-name">{{user.phone}}</span>
+                        <br>
+                        <label class="adr-user">Verify</label>
+                        <span class="user-name">{{user.actvition}}</span>
+                        <br>
+                        <!-- <button class="btn btn-danger delet">Delet</button> -->
+                        <button routerLink="/detils/{{user._id}}" class="btn btn-success verified">Details</button>
+                        <br>
+                        <a *ngIf="user.actvition===true" href="#">
+                            <h1 class="alert alert-success">Verified</h1>
+                        </a>
+                        <a *ngIf="user.actvition===false" href="#">
+                            <h1 class="alert alert-danger">Unverified</h1>
+                        </a>
+
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

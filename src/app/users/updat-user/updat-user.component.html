@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row body">
+        <legend class="Lista-Users  text-center ">Update</legend>
+        <div class="col-md-12">
+            <form class='back-groun text-center lead form-group' [formGroup]="updateUser" (ngSubmit)="updateDataUser()">
+                <label class="adr-user">Name</label>
+                <input type="text" name="name" id="name" formControlName="name" class="form-control">
+                <span *ngIf="name.touched  && name.invalid">
+                    <small *ngIf="name.errors.required"  id="emailHelp" class="form-text text-muted">Please enter Name.</small>
+                    <small *ngIf="name.errors.minlength" id="emailHelp" class="form-text text-muted">Name must be at least 8 characters.</small>
+                    <small *ngIf="name.errors.maxlength" id="emailHelp" class="form-text text-muted">Maxlength is 315.</small>
+                </span>
+                <br>
+                <label class="adr-user">Email</label>
+                <input type="email" name="email" id="email" formControlName="email" class="form-control">
+                <span *ngIf="email.touched  && email.invalid">
+                    <small *ngIf="email.errors.required"  id="emailHelp" class="form-text text-muted">Please enter Email.</small>
+                    <small *ngIf="email.errors.minlength" id="emailHelp" class="form-text text-muted">Email must be at least 8 characters.</small>
+                    <small *ngIf="email.errors.maxlength" id="emailHelp" class="form-text text-muted">Maxlength is 315.</small>
+                    <small *ngIf="email.errors.email" >Please enter a valid Email</small>
+                </span>
+                <br>
+                <label class="adr-user">Modile</label>
+                <input type="text" name="phone" id="phone" formControlName="phone" class="form-control">
+                <span *ngIf="phone.touched  && phone.invalid">
+                    <small *ngIf="phone.errors.required"  id="emailHelp" class="form-text text-muted">Please enter Modile.</small>
+                    <small *ngIf="phone.errors.minlength" id="emailHelp" class="form-text text-muted">Modile must be at least 8 characters.</small>
+                    <small *ngIf="phone.errors.maxlength" id="emailHelp" class="form-text text-muted">Maxlength is 315.</small>
+                </span>
+                <br>
+              
+                <button  class="btn btn-success delet btn-lg" type="submit">Update</button>
+            </form>
+            <input type="file" (change)="fileSlecet($event)">
+            <button (click)="fileUpload()" >save</button>
+        </div>
+    </div>
+</div>

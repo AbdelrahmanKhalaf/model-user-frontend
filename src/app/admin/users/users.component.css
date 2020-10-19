@@ -1,0 +1,64 @@
+.Lista-Users{
+    border-bottom: 3px rebeccapurple groove;
+    border-top: 3px rebeccapurple groove;
+    background-color: rgb(102, 51, 153,0.6);
+    font-size: 30px;
+}
+.body{
+    margin-top: 10px;
+    border-bottom: 3px rebeccapurple groove;
+    border-left: 3px rebeccapurple groove;
+    border-right: 3px rebeccapurple groove;
+    background-color: rgb(102, 51, 153,0.6);
+    height: 100%;
+    max-height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.back-groun{
+    border: 3px rebeccapurple groove;
+    height: 100%;
+}
+ol, ul{
+    display: inline-block;
+}
+.user-avatar{
+    border: 3px rgb(102, 51, 153,0.6) groove;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 60px;
+    background-color: rgb(102, 51, 153,0.6);
+
+}
+label{
+    text-align: center;
+    display: block;
+    background-color: rgb(102, 51, 153,0.6);
+    color:black;
+    font-size:20px;
+
+}
+@media (min-width: 768px){
+.lead {
+    font-size: 16px;
+}
+}
+.delet{
+    margin: 10px;
+}
+
+span{
+    color:black ;
+    font-size: 16px;
+}
+.btn-danger{
+    color: black;
+}
+.btn-success{
+    color: black;
+
+}
+a{
+    
+}

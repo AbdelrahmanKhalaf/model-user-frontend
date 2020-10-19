@@ -1,0 +1,37 @@
+<div class="body-c">
+    <div class="container">
+        <div class="row body">
+            <legend class="Lista-Users  text-center ">My Details</legend>
+            <div class="col-md-12">
+                <ul class="col-md-12 ">
+                    <div class='back-groun text-center lead' *ngIf='user'>
+                        <label class="adr-user"></label>
+                        <span><img class="user-avatar " src="http://localhost:3000/{{user.avatar}}" alt="user"></span>
+                        <br>
+                        <label class="adr-user">Name</label>
+                        <span class="user-name">{{user.name}}</span>
+                        <br>
+                        <label class="adr-user">Email</label>
+                        <span class="user-name">{{user.email}}</span>
+                        <br>
+                        <label class="adr-user">Modile</label>
+                        <span class="user-name">{{user.phone}}</span>
+                        <br>
+                        <label class="adr-user">Verify</label>
+                        <span class="user-name">{{user.actvition}}</span>
+                      
+                        <br>
+                        <a *ngIf="user.actvition===true" href="#">
+                            <h1 class="alert alert-success">Right</h1>
+                        </a>
+                        <a *ngIf="user.actvition===false" href="#">
+                            <h1 class="alert alert-danger">Erorr</h1>
+                        </a>
+                        <button class="btn btn-danger delet btn-lg" (click)="deletUser()">Delet</button>
+                        <button class="btn btn-success delet btn-lg" routerLink="/updat-user/{{user._id}}">Update</button>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

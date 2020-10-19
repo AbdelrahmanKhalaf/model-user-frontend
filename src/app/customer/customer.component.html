@@ -1,0 +1,30 @@
+<p>customer works!</p>
+<div class="container">
+    <div class="row body">
+        <legend class="Lista-Users  text-center ">Update</legend>
+        <div class="col-md-12">
+            <form class='back-groun text-center lead form-group' [formGroup]="createCust" (ngSubmit)="save()">
+                <label class="adr-user">Name</label>
+                <input type="text" name="name" id="name" formControlName="name" class="form-control ">
+           
+                <br>
+                <label class="adr-user">Email</label>
+                <input type="email" name="email" id="email" formControlName="email" class="form-control">
+               
+                <br>
+                <label class="adr-user">Modile</label>
+                <input type="text" name="phone" id="phone" formControlName="phone" class="form-control">
+               
+                <br>
+            
+                <label class="adr-user">Imaeg</label>
+                <input type="text" name="avatr" id="avatar" formControlName="avatr" class="form-control ">
+              
+                <br>
+                <button class="btn btn-success delet btn-lg" type="submit">Save</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
